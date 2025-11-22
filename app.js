@@ -35,6 +35,7 @@ function openModal() {
 	document.getElementById('successMessage').style.display = 'none';
 }
 
+
 function closeModal() {
 	document.getElementById('bookingModal').style.display = 'none';
 	document.getElementById('bookingForm').reset();

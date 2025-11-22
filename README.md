@@ -77,4 +77,4 @@ Made with ❤️ — enjoy building on it! If you want, I can:
 - Add screenshots and a demo GIF
 - Add a simple Express server to accept bookings
 
-Tell me which one you'd like next. ✨
+Tell me which one you'd like next. 
