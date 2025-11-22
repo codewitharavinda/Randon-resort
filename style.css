@@ -1,0 +1,306 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	color: #333;
+}
+
+header {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	padding: 1rem 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.logo {
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+	opacity: 0.8;
+}
+
+.hero {
+	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23667eea" width="1200" height="600"/><circle fill="%23764ba2" opacity="0.3" cx="200" cy="300" r="150"/><circle fill="%23667eea" opacity="0.3" cx="1000" cy="400" r="200"/></svg>');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+	margin-top: 60px;
+}
+
+.hero-content h1 {
+	font-size: 3.5rem;
+	margin-bottom: 1rem;
+	animation: fadeInUp 1s ease;
+}
+
+.hero-content p {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+	animation: fadeInUp 1s ease 0.2s both;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.search-box {
+	background: white;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+	max-width: 900px;
+	margin: 0 auto;
+	animation: fadeInUp 1s ease 0.4s both;
+}
+
+.search-form {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group label {
+	color: #333;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group select {
+	padding: 0.8rem;
+	border: 2px solid #e0e0e0;
+	border-radius: 5px;
+	font-size: 1rem;
+	transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+	outline: none;
+	border-color: #667eea;
+}
+
+.search-btn {
+	grid-column: 1 / -1;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	border: none;
+	padding: 1rem;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.search-btn:hover {
+	transform: translateY(-2px);
+}
+
+.section {
+	max-width: 1200px;
+	margin: 4rem auto;
+	padding: 0 2rem;
+}
+
+.section-title {
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 3rem;
+	color: #333;
+}
+
+.hotels-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.hotel-card {
+	background: white;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+
+.hotel-card:hover {
+	transform: translateY(-10px);
+}
+
+.hotel-image {
+	width: 100%;
+	height: 200px;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 3rem;
+}
+
+.hotel-info {
+	padding: 1.5rem;
+}
+
+.hotel-name {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	color: #333;
+}
+
+.hotel-location {
+	color: #666;
+	margin-bottom: 1rem;
+}
+
+.hotel-rating {
+	color: #ffa500;
+	margin-bottom: 1rem;
+}
+
+.hotel-price {
+	font-size: 1.5rem;
+	color: #667eea;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.book-btn {
+	width: 100%;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	border: none;
+	padding: 0.8rem;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: opacity 0.3s;
+}
+
+.book-btn:hover {
+	opacity: 0.9;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 2000;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-content {
+	background: white;
+	padding: 2rem;
+	border-radius: 10px;
+	max-width: 500px;
+	width: 90%;
+	max-height: 90vh;
+	overflow-y: auto;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.close-btn {
+	font-size: 2rem;
+	cursor: pointer;
+	border: none;
+	background: none;
+	color: #666;
+}
+
+.booking-form .form-group {
+	margin-bottom: 1rem;
+}
+
+.booking-form input {
+	width: 100%;
+}
+
+.confirm-btn {
+	width: 100%;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	border: none;
+	padding: 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1.1rem;
+	margin-top: 1rem;
+}
+
+footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 2rem;
+	margin-top: 4rem;
+}
+
+.success-message {
+	background: #4caf50;
+	color: white;
+	padding: 1rem;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+	display: none;
+}
+
